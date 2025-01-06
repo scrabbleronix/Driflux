@@ -1,6 +1,6 @@
 ![Driflux Image](projFiles/driflux.ico)
 
-welcome to **Driflux** (*ew sounds like a kitchen sponge cleaner company*), a drag-and-drop game that’s **NOT** fun
+welcome to **Driflux** (*ew sounds like a kitchen sponge company*), a drag-and-drop game that’s **NOT** fun
 
 <br>the game is all about dragging the right answers into place before time runs out<br>thats all there is
 
