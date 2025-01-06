@@ -2,7 +2,6 @@ const CACHE_NAME = "driflux-cache-v1";
 const filesToCache = [
   "/",
   "/index.html",
-  "/images/*",
   "/sounds/*",
 ];
 
