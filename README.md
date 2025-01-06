@@ -20,7 +20,8 @@ welcome to **Driflux** (*ew sounds like a kitchen sponge cleaner company*), a dr
 3. play, or don't—up to you.
 
 > OPTIONAL SHIT
-run it on a local server because **service workers don't work on file://**
+
+<br>run it on a local server because **service workers don't work on file://**
 
 local server list:
 - **vs code live server**: if you're using visual studio code, you can install the "live server" extension. it serves your project over `http://localhost`. right-click on `index.html` and select **open with live server**.
