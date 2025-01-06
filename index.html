@@ -692,15 +692,16 @@
         progress.style.width = percentage + "%";
       }
 
+      // im a noob
       function playSound(type) {
         const audio = new Audio(
           type === "correct"
-            ? "correct-sound.mp3"
+            ? "docs/correct-sound.mp3"
             : type === "wrong"
-            ? "wrong-sound.mp3"
+            ? "docs/wrong-sound.mp3"
             : type === "combo"
-            ? "combo-sound.mp3"
-            : "default-sound.mp3"
+            ? "docs/combo-sound.mp3"
+            : "docs/default-sound.mp3"
         );
 
         audio.play();
