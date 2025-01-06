@@ -359,9 +359,15 @@ function playSound(type) {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("service-worker.js")
+      .register("/service-worker.js")
       .then((registration) => {
         console.log("Service Worker registered with scope:", registration.scope);
+
+        if (navigator.serviceWorker.controller) {
+          console.log("Service Worker is already controlling the page.");
+        } else {
+          console.log("No service worker controlling the page.");
+        }
 
         registration.onupdatefound = () => {
           const installingWorker = registration.installing;
@@ -376,22 +382,28 @@ if ("serviceWorker" in navigator) {
             }
           };
         };
+
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+          console.log("Service Worker controller has changed. New content is available.");
+          alert("A new version of Driflux is available. Please refresh the page to update.");
+        });
       })
       .catch((error) => {
-        console.error("Service Worker registration failed:", error);
+        console.log("Service Worker registration failed:", error);
       });
   });
-} else {
-  console.warn("Service Workers are not supported by this browser.");
 }
 
 function promptUpdate(registration) {
-  if (confirm("New version available. Update now?")) {
-    registration.waiting.postMessage({ action: "skipWaiting" });
+  if (registration.waiting) {
+    if (confirm("New version available. Update now?")) {
+      registration.waiting.postMessage({ action: "skipWaiting" });
+    }
   }
 }
 
 navigator.serviceWorker.addEventListener("controllerchange", () => {
+  console.log("New service worker controlling the page. Reloading to get the latest content...");
   window.location.reload();
 });
 
