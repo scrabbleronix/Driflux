@@ -17,7 +17,7 @@ welcome to **Driflux** (*ew sounds like a kitchen sponge company*), a drag-and-d
 use the link below 😭😭
 <br>
 
-![Driflux](https://scrabbleronix.github.io/Driflux/)
+[Driflux](https://scrabbleronix.github.io/Driflux/)
 <br>
 
 or if you really feel like it, then install it
