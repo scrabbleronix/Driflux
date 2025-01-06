@@ -1,1 +1,0 @@
-nver fucking mind
