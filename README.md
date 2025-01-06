@@ -44,12 +44,14 @@ local server list:
 - **python http server**: if you have python installed, you can start a simple http server:
   - for python 3.x:
     ```bash
-    python -m http.server 8000
+    python3 -m http.server 8000
     ```
   - for python 2.x:
     ```bash
     python -m SimpleHTTPServer 8000
     ```
+  <br>
+
   then, open `http://localhost:8000` in your browser.
 
 <br>
