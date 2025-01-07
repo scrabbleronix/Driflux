@@ -8,7 +8,7 @@
   "theme_color": "#42a5f5",
   "icons": [
     {
-      "src": "projFiles/driflux.ico",
+      "src": "driflux.ico",
       "sizes": "64x64",
       "type": "image/ico"
     }
